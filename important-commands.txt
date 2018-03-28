@@ -1,0 +1,6 @@
+sudo docker build --build-arg PORT=9000 -t "gurukul-kangri" .
+sudo docker run -p 9000:9000 -d gurukul-kangri
+ heroku login
+sudo heroku container:login
+sudo docker tag gurukul-kangri:latest registry.heroku.com/internity-workshop/web
+sudo docker push registry.heroku.com/internity-workshop/web
